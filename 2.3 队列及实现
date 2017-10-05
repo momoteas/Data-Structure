@@ -1,0 +1,68 @@
+1 什么时队列：
+    。队列(queue)：具有一定操作约束的线性表。插入和删除操作：只能在一端插入，而在另一端删除；
+    。队列的抽象数据类型描述：
+        。类型名词：队列
+        。数据对象集：一个有0个或多个元素的有穷线性表；
+        。操作集：长度为MaxSize的队列Q属于Queue,队列元素item输入ElementType;
+            。Queue CreatQueue(int MaxSize):生成长度为MaxSize的空队列；
+            。int IsEmpty(Queue Q, int MaxSize):判断队列Q是否为空；
+            。void AddQ(Queue Q, ElementType item):将数据元素item插入队列Q中；
+            。int IsFullQ(Queue Q, int MaxSize):判断队列Q是否已满；
+            。ElementType DeleteQ(Queue Q):将队头数据元素从队列中删除并返回；
+2 队列的顺序存储实现：
+    。队列的顺序存储结构通常由一个一维数组和一个记录队列头元素位置额变量front以及一个记录队列尾元素的变量rear组成；
+        。结构：          #define MaxSize <储存数据元素的最大个数>
+                         struct QNode{
+                              ElementType Data[MaxSize];
+                              int rear;
+                              int front;
+                         };
+                         typedef struct QNode *Queue;
+        。循环队列：
+    。队列的链式存储方式：
+        。队列的链式存储结构也可以用一个单链表实现。插入和删除操作分别在链表的两头进行；
+        。结构：          struct Node{
+                              ElementType Data;
+                              struct Node *Next;
+                         };
+                         struct QNode{
+                              struct Node *rear;
+                              struct Node *front;
+                         };
+                         typedef struct QNode *Queue;
+                         Queue PtrQ;
+    。多项式加法运算：
+        。采用不带头结点的单项链表，按照指数递减的顺序排列各项；
+        。结构：          struct PolyNode{
+                              int coef;   //系数
+                              int expon;  //指数
+                              struct PolyNode *link;    //指向下一个节点的指针；
+                         };
+                         typedef struct PolyNOde *Polynomial;
+                         Polynomial P1, P2;
+                         
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
