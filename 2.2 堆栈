@@ -17,6 +17,30 @@
             。void Push(Stack S, ElementType item):将元素item压入堆栈；
             。int IsEmpty(Stack S):判断堆栈S是否为空；
             。ElementType Pop(Stack S):删除并返回栈顶元素；
+    。栈的顺序存储实现：
+        。栈的顺序存储结构通常由一个一维数组和一个记录栈顶元素位置的变量组成；
+        。结构：        #define MaxSize <存储数据元素的最大个数>;
+                       typedef struct SNode *stack；
+                       struct SNode{
+                            ElementType Data[MaxSize];
+                            int top;
+                       };
+    。堆栈的链式存储实现：
+        。栈的链式存储结构实际上就是一个单链表，叫做链栈。插入和删除操作只能在链栈的栈顶进行；
+        。结构：            typedef struct SNode *stack;
+                           struct SNode{
+                                ElementType Data;
+                                struct SNode *Next;
+                           };
+    。堆栈应用：表达式求值
+        。中缀表达式求值：
+            。基本策略，将中缀表达式转换为后缀表达式，然后求值；
+        。堆栈的其他应用：
+            。函数调用即递归实现；
+            。深度优先搜索；
+            。回溯算法
+          
+        
       
       
       
