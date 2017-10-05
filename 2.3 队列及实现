@@ -40,7 +40,7 @@
                          };
                          typedef struct PolyNOde *Polynomial;
                          Polynomial P1, P2;
-                         
+        。                 
               
 
 
