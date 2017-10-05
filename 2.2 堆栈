@@ -1,0 +1,27 @@
+2.2.1 线性结构：
+    。什么是堆栈：
+        。后缀表达式：
+            。丘值策略，从左向右“扫描”，逐个处理运算数和运算符号：
+                。遇到运算数怎麼办？如何记住目前还未参与运算的数？
+                。遇到运算符号怎么办？对应的运算数是什么？
+        。启示：需要有种存储方法，能顺序存储运算数，并在需要时“倒序”输出；
+    。堆栈的抽象数据类型描述：
+        。堆栈(stack):具有一定操作约束的线性表。只在一端（栈顶，Top）做插入，删除；
+        。插入数据：入栈push;
+        。删除数据：出栈pop;
+        。后入先出：Last in First Out;
+        。数据对象集：一个有0个或多个元素的有穷线性表；
+        。操作集：
+            。Stack CreatStack(int MaxSize): 生成空堆栈，其最大长度位MaxSize;
+            。int IsFull(Stack S, int MaxSize):判断堆栈S是否已满；
+            。void Push(Stack S, ElementType item):将元素item压入堆栈；
+            。int IsEmpty(Stack S):判断堆栈S是否为空；
+            。ElementType Pop(Stack S):删除并返回栈顶元素；
+      
+      
+      
+      
+      
+      
+      
+         
